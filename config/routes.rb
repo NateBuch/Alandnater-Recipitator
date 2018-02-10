@@ -1,10 +1,8 @@
-Rails.application.routes.draw do
-  get 'welcome/index'
-  
-  resources :recipes
+Rails.application.routes.draw do  
+  get '/home', to: 'homes#index'
+  post '/home/create', to: 'homes#create'
 
-  root 'welcome#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # resources :recipes  
 end
 
 
